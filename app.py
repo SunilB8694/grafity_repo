@@ -6,6 +6,7 @@ import os
  
 from grafityMain import grafitymain_bp
 from quickStart import quickstart_bp
+from grafityGet import grafity_bp
 # from grafitymain_routes import grafitymain_bp
 # from quickstart_routes import quickstart_bp
  
@@ -22,7 +23,7 @@ CORS(app, origins=["http://localhost:4200"])
  
 # Register Blueprints
 
- 
+app.register_blueprint(grafity_bp)
 app.register_blueprint(grafitymain_bp)
 app.register_blueprint(quickstart_bp)
  
